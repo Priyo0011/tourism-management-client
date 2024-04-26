@@ -54,7 +54,7 @@ const Nav = () => {
             </ul>
           </div>
           <a className="text-xl font-bold text-gray-800">
-            Explore<span className="text-sky-800">Asia</span>
+            Explore<span className="text-sky-800">World</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">

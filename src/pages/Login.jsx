@@ -33,7 +33,7 @@ const Login = () => {
   return (
     <div className="max-w-[1600px] mx-auto">
       <Nav></Nav>
-      <div className="bg-base-200 md:p-24 mt-10">
+      <div className="bg-sky-50 md:p-24 mt-10">
         <h1 className="text-2xl font-bold text-center">Login your account</h1>
         <form onSubmit={handleLogin} className="card-body md:w-3/5 mx-auto">
           <div className="form-control">
