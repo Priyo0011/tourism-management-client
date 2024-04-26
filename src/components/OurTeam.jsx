@@ -3,10 +3,8 @@ const OurTeam = () => {
     <div>
       <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
-          <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">
-            Meet our team
-          </h1>
-          <p className="max-w-2xl text-center dark:text-gray-600">
+        <h1 className="text-3xl text-center mt-20 text-sky-700 font-bold">Meet our team</h1>
+          <p className="max-w-2xl text-center text-sky-800">
             Welcome to the prestigious team at Aurora Luxe, where excellence
             meets sophistication. Our dedicated professionals are committed to
             curating an unparalleled experience for our esteemed guests. Led by
@@ -23,7 +21,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Victoria Sinclair
               </p>
-              <p className="dark:text-gray-600">Concierge Manager</p>
+              <p className="text-sky-700">Concierge Manager</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -34,7 +32,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Maximilian Sterling
               </p>
-              <p className="dark:text-gray-600">Interior Designer</p>
+              <p className="text-sky-700">Interior Designer</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -45,7 +43,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Isabella Montague
               </p>
-              <p className="dark:text-gray-600">Head Chef</p>
+              <p className="text-sky-700">Head Chef</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -56,7 +54,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Sebastian Vanderbilt
               </p>
-              <p className="dark:text-gray-600">Estate Manager</p>
+              <p className="text-sky-700">Estate Manager</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -67,7 +65,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Olivia Beaumont
               </p>
-              <p className="dark:text-gray-600">Events Coordinator</p>
+              <p className="text-sky-700">Events Coordinator</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -78,7 +76,7 @@ const OurTeam = () => {
               <p className="text-xl font-semibold leading-tight">
                 Alexander Kingsley{" "}
               </p>
-              <p className="dark:text-gray-600">Personal Butler</p>
+              <p className="text-sky-700">Personal Butler</p>
             </div>
           </div>
         </div>
