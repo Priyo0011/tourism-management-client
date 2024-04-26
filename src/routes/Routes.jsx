@@ -28,9 +28,9 @@ const router = createBrowserRouter([
           element: <Register></Register>,
         },
         {
-          path: "/update/id",
+          path: "/update/:id",
           element:<Update></Update>,
-          loader: ({params})=> fetch(`http://localhost:5000/update/${params.id}`)
+          loader: ({params})=> fetch(`http://localhost:5000/singleSpot/${params.id}`)
         },
 
         {

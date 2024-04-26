@@ -1,19 +1,15 @@
+
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const List = ({ item, setControl, control }) => {
+    
   const {
     country_Name,
     tourists_spot_name,
     average_cost,
-    location,
-    seasonality,
     travel_time,
-    totalVisitorsPerYear,
-    description,
     photo,
-    email,
-    displayName,
     _id,
   } = item;
 
@@ -51,15 +47,18 @@ const List = ({ item, setControl, control }) => {
           <img className="h-[240px] w-full p-4 " src={photo} alt="" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{tourists_spot_name}</h2>
-          <h3 className="font-bold uppercase">{totalVisitorsPerYear}</h3>
+          <h2 className="card-title">Country Name: <span className="font-light ml-3">{country_Name}</span> </h2>
+          <h3 className="font-bold uppercase">Tourists Spot: <span className="font-light ml-3">{tourists_spot_name}</span></h3>
           <div className="flex">
             <p>
-              <span className="font-semibold">Price</span> ${average_cost}
+              <span className="font-semibold ">Average Cost:</span> <span className="ml-2 font-light">${average_cost}</span>
+            </p>
+            <p>
+              <span className="font-semibold">Travel Time: </span><span className="ml-2 font-light">{travel_time} day</span>
             </p>
           </div>
-          <div className="flex justify-around">
-            <Link to={`update/${_id}`}>
+          <div className="flex justify-around mt-8">
+            <Link to={`/update/${_id}`}>
               <button className="btn bg-sky-700 text-white uppercase w-full">
                 Update
               </button>

@@ -1,8 +1,10 @@
 import Swal from "sweetalert2";
 import Nav from "../components/Nav";
 import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const AddTouristsSpot = () => {
+  const navigate = useNavigate();
   const { user } = useAuth();
   const handleAddSpot = (e) => {
     e.preventDefault();
@@ -56,6 +58,29 @@ const AddTouristsSpot = () => {
     <div className="max-w-[1600px] mx-auto">
       <Nav></Nav>
       <div className="bg-sky-50 mt-10">
+        <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center justify-center w-1/2 px-5 py-1 text-sm text-white transition-colors duration-200 bg-sky-600 border  gap-x-2 sm:w-auto   hover:bg-gray-100 "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-5 h-5 rtl:rotate-180 text-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+              />
+            </svg>
+
+            <span>Go back</span>
+          </button>
+        </div>
         <h2 className="text-3xl font-extrabold text-center p-10 text-sky-700">
           Add Tourists Spot
         </h2>
@@ -197,7 +222,7 @@ const AddTouristsSpot = () => {
             </div>
             <input
               type="submit"
-              value="Add Coffee"
+              value="Add Tourists Spot"
               className="btn btn-block bg-sky-700 text-white"
             />
           </form>
