@@ -88,7 +88,7 @@ const AddTouristsSpot = () => {
         <h2 className="text-3xl font-extrabold text-center p-10 text-sky-700">
           Add Tourists Spot
         </h2>
-        <div className="px-24 pb-24">
+        <div className="md:px-24 px-8   md:pb-24 pb-8">
           <form onSubmit={handleAddSpot}>
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
@@ -106,7 +106,7 @@ const AddTouristsSpot = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Country Name</span>
                 </label>
@@ -135,7 +135,7 @@ const AddTouristsSpot = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Location</span>
                 </label>
@@ -164,7 +164,7 @@ const AddTouristsSpot = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Travel Time</span>
                 </label>
@@ -194,7 +194,7 @@ const AddTouristsSpot = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Description</span>
                 </label>

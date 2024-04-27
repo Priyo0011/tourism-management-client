@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import Nav from "../components/Nav";
 import useAuth from "../hooks/useAuth";
 import SocialLogin from "./SocialLogin";
 import toast,{ Toaster } from "react-hot-toast";

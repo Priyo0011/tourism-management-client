@@ -71,7 +71,7 @@ const Update = () => {
   return (
     <div className="max-w-[1600px] mx-auto">
 
-      <div className="bg-sky-50 mt-10">
+      <div className="bg-base-200 mt-10">
         <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
           <button
             onClick={() => navigate(-1)}
@@ -98,7 +98,7 @@ const Update = () => {
         <h2 className="text-3xl font-extrabold text-center p-10 text-sky-700">
           Update Tourists Spot
         </h2>
-        <div className="px-24 pb-24">
+        <div className="md:px-24 px-8   md:pb-24 pb-8">
           <form onSubmit={handleUpdateSpot}>
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
@@ -117,7 +117,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Country Name</span>
                 </label>
@@ -148,7 +148,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Location</span>
                 </label>
@@ -179,7 +179,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Travel Time</span>
                 </label>
@@ -211,7 +211,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 md:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Description</span>
                 </label>
