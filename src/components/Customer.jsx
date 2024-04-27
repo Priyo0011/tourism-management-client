@@ -1,6 +1,6 @@
 const Customer = () => {
   return (
-    <div className="flex flex-col  p-8 shadow-sm lg:p-12 bg-sky-50 text-sky-700 w-full">
+    <div className="flex flex-col  p-8 shadow-sm lg:p-12 bg-base-200 text-sky-700 w-full mb-10">
 	<div className="flex flex-col w-full">
 		<h2 className="text-3xl font-bold text-center">Customer reviews</h2>
 		<div className="flex flex-wrap items-center mt-2 mb-1 space-x-2">
@@ -33,7 +33,7 @@ const Customer = () => {
 			</div>
 			<span className="text-sky-500">3 out of 5</span>
 		</div>
-		<p className="text-sm text-sky-500">861 global ratings</p>
+		<p className="text-sm text-sky-500">861 Southeast Asia ratings</p>
 		<div className="flex flex-col mt-4">
 			<div className="flex items-center space-x-1">
 				<span className="flex-shrink-0 w-12 text-sm">5 star</span>

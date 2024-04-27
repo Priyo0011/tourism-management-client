@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import Nav from "./Nav";
+
 import { FaLocationDot } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
@@ -31,9 +31,8 @@ const Detail = () => {
   }, [id]);
   return (
     <div className="max-w-[1600px] mx-auto">
-      <Nav></Nav>
       <div className="mt-10">
-        <div className=" bg-sky-50 ">
+        <div className=" bg-base-200 ">
           <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
             <button
               onClick={() => navigate(-1)}
@@ -63,28 +62,36 @@ const Detail = () => {
             </figure>
 
             <div className="card-body">
-              <div className=" bg-sky-100">
+              <div className=" bg-sky-100"></div>
+              <h2 className="card-title text-2xl">
+                Country Name :{" "}
+                <span className="font-light ml-4">{country_Name}</span>
+              </h2>
+              <div className="flex items-center">
+                <h3 className="font-bold uppercase mr-20">
+                  Tourists Spot :{" "}
+                  <span className="font-light ml-4">{tourists_spot_name}</span>
+                </h3>
                 <p className="flex items-center ml-8 gap-4 p-1">
-                  <FaLocationDot />
-                  {location}
+                  <FaLocationDot className="font-bold"/>
+                  <span className="font-light">{location}</span>
                 </p>
               </div>
-              <h2 className="card-title text-2xl">{country_Name}</h2>
-              <h3 className="font-bold uppercase">{tourists_spot_name}</h3>
-              <div className=" md:grid grid-cols-3">
-                <p className="bg-gray-600 text-center text-white">
-                  <span className="font-semibold">Price :</span> ${}
+              <div className=" md:grid grid-cols-4 items-center">
+                <p className="font-semibold">Average Cost :
+                  <span className="font-light ml-4">$ {average_cost}</span>
+                  
                 </p>
-                <p className="bg-gray-300 text-center">
-                  <span className="font-semibold">Area :</span> {}
+                <p className="font-semibold">
+                  Travel Time :<span className="ml-4 font-light">{travel_time} day.</span>
                 </p>
-                <p className="bg-gray-600 text-center text-white">
-                  <span className="font-semibold mr-2">For :</span>
+                <p className="font-semibold">seasonality : <span className="ml-4 font-light">{seasonality}</span></p>
+                <p className="font-semibold">Total Visitors :
+                  <span className="ml-4 font-light">{totalVisitorsPerYear} people /Year</span>
                   {}
                 </p>
               </div>
-
-              <p>{}</p>
+              <p className="mt-4">{description}</p>
             </div>
           </div>
         </div>

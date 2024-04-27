@@ -42,7 +42,7 @@ const List = ({ item, setControl, control }) => {
 
   return (
     <div className="mt-8">
-      <div className=" bg-sky-50">
+      <div className=" bg-base-200">
         <figure>
           <img className="h-[240px] w-full p-4 " src={photo} alt="" />
         </figure>

@@ -10,7 +10,7 @@ const TouristsSpots = ({spot}) => {
         _id}=spot;
     return (
         <div>
-      <div className=" bg-sky-50">
+      <div className=" bg-base-200">
         <figure>
           <img className="h-[240px] w-full p-4 " src={photo} alt="" />
         </figure>

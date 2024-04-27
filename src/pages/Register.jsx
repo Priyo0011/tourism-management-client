@@ -1,15 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
-import { FaEye,FaEyeSlash } from "react-icons/fa";
-import Nav from "../components/Nav";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
-    const {createUser,updateUserProfile, setLoading,}= useAuth();
-    const [showPass, setShowPass]= useState(false);
-    const location = useLocation();
-    const navigate = useNavigate();
+  const { createUser, updateUserProfile, setLoading } = useAuth();
+  const [showPass, setShowPass] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -17,19 +17,14 @@ const Register = () => {
     const imageURL = form?.imageURL.value;
     const email = form?.email.value;
     const password = form?.password.value;
-    if (
-        !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(
-          password
-        )
-      ) {
-      
-        toast.error(
-          "password must be have at least 6 characters,a capital & spacial letter,one number"
-        )
-        return;
-      }
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
+      toast.error(
+        "password must be have at least 6 characters,a capital & one number"
+      );
+      return;
+    }
     createUser(email, password)
-    .then((result) => {
+      .then((result) => {
         console.log(result.user);
         updateUserProfile({ displayName: name, photoURL: imageURL })
           .then(() => {
@@ -48,9 +43,8 @@ const Register = () => {
       });
   };
   return (
-    <div className="max-w-[1600px] mx-auto">
-      <Nav></Nav>
-      <div className="bg-sky-50 md:p-24 mt-10">
+    <div>
+      <div className="bg-base-200 md:p-24 mt-10">
         <h1 className="text-2xl font-bold text-center">Please Register</h1>
         <form onSubmit={handleRegister} className="card-body md:w-3/4  mx-auto">
           <div className="form-control">
@@ -95,17 +89,18 @@ const Register = () => {
             </label>
             <div className="relative">
               <input
-              type={showPass? "text":"password"}
-              required
-              name="password"
-              placeholder="Enter your password"
-              className="input input-bordered w-full"             
-            />
-            <span className="absolute top-4 right-4" onClick={() => setShowPass(!showPass)}>
-              {
-                showPass? <FaEye /> : <FaEyeSlash />
-              }
-            </span>
+                type={showPass ? "text" : "password"}
+                required
+                name="password"
+                placeholder="Enter your password"
+                className="input input-bordered w-full"
+              />
+              <span
+                className="absolute top-4 right-4"
+                onClick={() => setShowPass(!showPass)}
+              >
+                {showPass ? <FaEye /> : <FaEyeSlash />}
+              </span>
             </div>
             <label className="label">
               <a
@@ -117,7 +112,7 @@ const Register = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-gray-800 text-white uppercase">
+            <button className="btn bg-sky-800 text-white uppercase">
               Register
             </button>
           </div>
@@ -129,7 +124,11 @@ const Register = () => {
           </Link>
         </p>
       </div>
-      <Toaster/>
+      <Toaster
+          toastOptions={{
+            duration: 5000,
+          }}
+        />
     </div>
   );
 };

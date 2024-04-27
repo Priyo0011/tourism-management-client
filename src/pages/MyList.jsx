@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Nav from "../components/Nav";
+
 import useAuth from "../hooks/useAuth";
 import List from "./List";
 
@@ -17,8 +17,8 @@ const MyList = () => {
   }, [user, control]);
 
   return (
-    <div className="max-w-[1600px] mx-auto">
-      <Nav></Nav>
+    <div>
+
       <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
         {items?.map((item) => (
           <List

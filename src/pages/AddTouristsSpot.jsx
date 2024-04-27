@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-import Nav from "../components/Nav";
+
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
@@ -55,9 +55,9 @@ const AddTouristsSpot = () => {
   };
 
   return (
-    <div className="max-w-[1600px] mx-auto">
-      <Nav></Nav>
-      <div className="bg-sky-50 mt-10">
+    <div>
+
+      <div className="bg-base-200 mt-10">
         <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
           <button
             onClick={() => navigate(-1)}

@@ -4,7 +4,7 @@ const OurTeam = () => {
       <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
         <h1 className="text-3xl text-center mt-20 text-sky-700 font-bold">Meet our team</h1>
-          <p className="max-w-2xl text-center text-sky-800">
+          <p className="max-w-2xl text-center">
             Welcome to the prestigious team at Aurora Luxe, where excellence
             meets sophistication. Our dedicated professionals are committed to
             curating an unparalleled experience for our esteemed guests. Led by
