@@ -7,6 +7,7 @@ import MyList from "../pages/MyList";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Update from "../pages/Update";
+import Detail from "../components/Detail";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
           path: "/",
           element: <Home></Home>,
           loader: ()=> fetch(`http://localhost:5000/spot`)
+        },
+        {
+          path: "/detail/:id",
+          element: <Detail></Detail>, 
         },
         {
           path: "/login",
@@ -36,6 +41,7 @@ const router = createBrowserRouter([
         {
           path: "/all-tourists-spot",
           element: <AllTouristsSpot></AllTouristsSpot>,
+          loader: ()=> fetch(`http://localhost:5000/spot`)
         },
         {
           path: "/add-tourists-spot",

@@ -26,7 +26,7 @@ const TouristsSpots = ({spot}) => {
             </p>
           </div>
           <div className=" mt-8">
-            <Link>
+            <Link to={`/detail/${_id}`}>
               <button className="btn bg-sky-700 text-white uppercase w-full">
               View Details page
               </button>
