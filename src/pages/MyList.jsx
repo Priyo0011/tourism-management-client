@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import useAuth from "../hooks/useAuth";
 import List from "./List";
+import { useNavigation } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const MyList = () => {
   const { user } = useAuth();
@@ -15,6 +17,8 @@ const MyList = () => {
         setItem(data);
       });
   }, [user, control]);
+  const navigation = useNavigation()
+    if(navigation.state === 'loading') return<Loader></Loader>
 
   return (
     <div>

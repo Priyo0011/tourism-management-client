@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import Banner from "./Banner";
 
 import TouristsSpots from "../pages/TouristsSpots";
@@ -6,11 +6,11 @@ import OurTeam from "./OurTeam";
 
 import Customer from "./Customer";
 
+
 const Home = () => {
   const spots = useLoaderData();
   return (
     <div>
-
       <Banner></Banner>
       <div>
         <h1 className="text-3xl text-center mt-20 text-sky-700 font-bold">Tourists Spots</h1>

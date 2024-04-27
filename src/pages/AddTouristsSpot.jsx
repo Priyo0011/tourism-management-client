@@ -1,9 +1,12 @@
 import Swal from "sweetalert2";
 
 import useAuth from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useNavigation } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const AddTouristsSpot = () => {
+  const navigation = useNavigation();
+  
   const navigate = useNavigate();
   const { user } = useAuth();
   const handleAddSpot = (e) => {
@@ -53,6 +56,7 @@ const AddTouristsSpot = () => {
         }
       });
   };
+  if (navigation.state === "loading") return <Loader></Loader>;
 
   return (
     <div>

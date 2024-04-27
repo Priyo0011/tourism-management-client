@@ -1,9 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 
 import TouristsSpots from "./TouristsSpots";
+import Loader from "../components/Loader";
 
 const AllTouristsSpot = () => {
   const spots = useLoaderData();
+  const navigation = useNavigation()
+    if(navigation.state === 'loading') return<Loader></Loader>
   return (
     <div>
       <div>
