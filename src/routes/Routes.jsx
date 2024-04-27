@@ -8,12 +8,15 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Update from "../pages/Update";
 import Detail from "../components/Detail";
+import PrivateRoute from "../components/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage/>,
       children: [
         {
           path: "/",
@@ -22,7 +25,9 @@ const router = createBrowserRouter([
         },
         {
           path: "/detail/:id",
-          element: <Detail></Detail>, 
+          element: <PrivateRoute>
+            <Detail></Detail>
+          </PrivateRoute>, 
         },
         {
           path: "/login",
@@ -45,11 +50,15 @@ const router = createBrowserRouter([
         },
         {
           path: "/add-tourists-spot",
-          element:<AddTouristsSpot></AddTouristsSpot>,
+          element:<PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+            </PrivateRoute>,
         },
         {
           path: "/my-list",
-          element:<MyList></MyList>,
+          element:<PrivateRoute>
+            <MyList></MyList>
+          </PrivateRoute>,
         }, 
       ],
     },
