@@ -47,7 +47,7 @@ const Update = () => {
 
     console.log(updatedSpot);
 
-    fetch(`http://localhost:5000/singleSpot/${_id}`, {
+    fetch(`https://tourism-management-server-sigma.vercel.app/singleSpot/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

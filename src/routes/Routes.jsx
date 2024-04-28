@@ -12,6 +12,7 @@ import PrivateRoute from "../components/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
-          loader: ()=> fetch(`http://localhost:5000/spot`)
+          loader: ()=> fetch(`https://tourism-management-server-sigma.vercel.app/spot`)
         },
         {
           path: "/detail/:id",
@@ -40,13 +41,13 @@ const router = createBrowserRouter([
         {
           path: "/update/:id",
           element:<Update></Update>,
-          loader: ({params})=> fetch(`http://localhost:5000/singleSpot/${params.id}`)
+          loader: ({params})=> fetch(`https://tourism-management-server-sigma.vercel.app/singleSpot/${params.id}`)
         },
 
         {
           path: "/all-tourists-spot",
           element: <AllTouristsSpot></AllTouristsSpot>,
-          loader: ()=> fetch(`http://localhost:5000/spot`)
+          loader: ()=> fetch(`https://tourism-management-server-sigma.vercel.app/spot`)
         },
         {
           path: "/add-tourists-spot",

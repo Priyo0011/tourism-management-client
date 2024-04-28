@@ -22,7 +22,7 @@ const Detail = () => {
   } = detail;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleSpot/${id}`)
+    fetch(`https://tourism-management-server-sigma.vercel.app/singleSpot/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetail(data);

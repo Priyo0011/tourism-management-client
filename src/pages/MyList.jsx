@@ -11,7 +11,7 @@ const MyList = () => {
   const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mySpot/${user?.email}`)
+    fetch(`https://tourism-management-server-sigma.vercel.app/mySpot/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

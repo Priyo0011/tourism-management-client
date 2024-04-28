@@ -6,7 +6,6 @@ import OurTeam from "./OurTeam";
 
 import Customer from "./Customer";
 
-
 const Home = () => {
   const spots = useLoaderData();
   return (

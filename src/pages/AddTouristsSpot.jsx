@@ -39,7 +39,7 @@ const AddTouristsSpot = () => {
       displayName,
     };
 
-    fetch("http://localhost:5000/addSpot", {
+    fetch("https://tourism-management-server-sigma.vercel.app/addSpot", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newSpot),
